@@ -1,0 +1,6 @@
+N0CALL>APDW17,WIDE2-2:!4449.98N/08930.02W# Bramble Hill lab site - fictional
+N0CALL-9>APDW17,WIDE1-1:!4450.10N/08929.88W>Lab rover, invented for the guide
+N0CALL>APDW17,WIDE1-1:;HILLTOP  *111111z4449.98N/08930.02W#Fictional object from the lab
+N0CALL-9>APDW17,WIDE1-1::N0CALL   :Off-air loop test, nobody is transmitting{001
+N0CALL-5>APDW17,WIDE1-1:>Lab weather box says hello - generated audio only
+N0CALL-5>APDW17,WIDE1-1:T#001,123,045,006,078,090,00000000

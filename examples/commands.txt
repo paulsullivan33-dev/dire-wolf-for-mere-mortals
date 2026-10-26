@@ -1,0 +1,53 @@
+Dire Wolf — the distilled commands
+====================================================================
+Placeholders: <conf> is a configuration
+file of yours; <file.wav> a recording.
+
+INSTALL AND INVENTORY (chapter 4)
+--------------------------------------------------------------------
+  sudo apt install direwolf
+  dpkg-query -W direwolf
+  which direwolf gen_packets atest decode_aprs kissutil
+
+FIRST DECODE, NO RADIO (chapter 8)
+--------------------------------------------------------------------
+  atest <file.wav>              # decode a recording
+  atest -B 300 <file.wav>       # ... recorded at 300 baud
+  atest -B 9600 <file.wav>      # ... or at 9600
+  decode_aprs < packets.txt     # explain written packets
+
+MAKE A PACKET, HEAR IT BACK (chapter 9)
+--------------------------------------------------------------------
+  gen_packets -o packets.wav packets.txt
+  atest packets.wav             # the loop, closed
+  gen_packets -n 12 -o noisy.wav
+                                # rising noise, for t04's lesson
+  atest noisy.wav               # count what survives
+
+THE STATION (chapter 5)
+--------------------------------------------------------------------
+  direwolf -t 0 -c <conf>       # -t 0: colours off, clean logs
+  sed 's/^MYCALL/MYCAL/' direwolf.conf > broken.conf
+                                # t06's deliberate typo
+
+THE DOORS (chapter 7)
+--------------------------------------------------------------------
+  python3 knock.py              # one KISS frame, one AGW knock
+                                # (while direwolf runs, null.conf)
+  kissutil                      # frames <-> files on a KISS port
+
+A REAL STATION — the order of work
+(documented in chapters 5, 6, 10, 11;
+none of it was run in this lab)
+--------------------------------------------------------------------
+  1. MYCALL: your call sign, replacing
+     N0CALL — nothing transmits before it.
+  2. ADEVICE: the interface the radio is
+     actually wired to; PTT in the
+     channel block, unless VOX (don't).
+  3. Receive first: watch the level on
+     every decode (~50, brackets even)
+     before ever keying up.
+  4. DIGIPEAT / IGSERVER+IGLOGIN only
+     once 1-3 are true of the station —
+     and after chapters 10 and 11.

@@ -1,0 +1,40 @@
+$ timeout 9 direwolf -t 0 -d n -c null.conf
+Dire Wolf version 1.7
+Includes optional support for:  gpsd hamlib cm108-ptt
+
+Reading config file null.conf
+Config file: MYCALL must be set for channel 0 before beaconing is allowed.
+Config file: MYCALL must be set for receive channel 0 before digipeating is allowed.
+Config file: MYCALL must be set for transmit channel 0 before digipeating is allowed.
+Config file: Beaconing should be configured for channel 0 when digipeating is enabled.
+Audio device for both receive and transmit: null  (channel 0)
+Channel 0: 1200 baud, AFSK 1200 & 2200 Hz, A+, 44100 sample rate.
+Note: PTT not configured for channel 0. (Ignore this if using VOX.)
+Ready to accept AGW client application 0 on port 18000 ...
+Ready to accept KISS TCP client application 0 on port 8001 ...
+Ready to accept KISS TCP client application 0 on port 18001 ...
+
+Attached to KISS TCP client application 0 on port 18001 ...
+
+Ready to accept KISS TCP client application 1 on port 18001 ...
+
+Attached to AGW client application 0...
+
+Ready to accept AGW client application 1 on port 18000 ...
+
+Error getting message header from AGW client application 0.
+Tried to read 36 bytes but got only 0.
+Closing connection.
+
+
+<<< Data frame from KISS client application, channel 0, total length = 34
+  000:  c0 00 4c 41 42 54 45 53 54 20 6f 66 66 2d 61 69  ..LABTEST off-ai
+  010:  72 20 4b 49 53 53 20 64 6f 6f 72 20 63 68 65 63  r KISS door chec
+  020:  6b c0                                            k.
+
+KISS client application 0 on TCP port 18001 has gone away.
+
+[0L] (Not AX.25)LABTEST off-air KISS door check
+$ python3 knock.py
+KISS 18001: connected, sent one 34-byte frame
+AGW 18000: connected

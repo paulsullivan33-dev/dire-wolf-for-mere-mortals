@@ -1,0 +1,8 @@
+$ dpkg-query -W direwolf
+direwolf	1.7+dfsg-2build2
+$ which direwolf gen_packets atest decode_aprs kissutil
+/usr/bin/direwolf
+/usr/bin/gen_packets
+/usr/bin/atest
+/usr/bin/decode_aprs
+/usr/bin/kissutil

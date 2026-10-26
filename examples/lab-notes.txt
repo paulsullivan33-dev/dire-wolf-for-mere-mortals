@@ -1,0 +1,114 @@
+The lab — one real install, no radio, nothing transmitted
+====================================================================
+
+The lab is Dire Wolf as the distribution
+ships it, installed with the system
+package manager on the build machine
+(an Ubuntu 24.04 sandbox, 2 CPUs,
+7.7 GB RAM):
+
+  * Dire Wolf 1.7 (package
+    1.7+dfsg-2build2), with its companion
+    tools gen_packets, atest, decode_aprs
+    and kissutil.
+  * Every run was made as an
+    unprivileged user, not root — Dire
+    Wolf prints a pointed warning about
+    root, repeatedly, and the lab took
+    the hint so the transcripts did not
+    have to carry it fifteen times.
+  * No radio, no sound card, no audio
+    device of any kind was attached.
+    Audio in this lab is generated WAV
+    files; the one full program start
+    used ALSA's "null" device, a
+    software sound card that discards
+    what it is given and hears silence.
+  * Every station is fictional: the
+    placeholder call sign N0CALL, an
+    invented hilltop (Bramble Hill), a
+    position over open farmland chosen
+    to be nobody's station and nobody's
+    home. Nothing was transmitted at
+    any point.
+
+What the lab ran, in
+dire-wolf-lab/transcripts/:
+
+  * t00 the package version and the
+    five companion tools on the path.
+  * t01 the six fixture packets of
+    dire-wolf-lab/packets.txt turned
+    into packets.wav by gen_packets
+    (4.7 seconds, 417,276 bytes).
+  * t02 the WAV decoded by atest:
+    6 of 6, audio level 50 on each.
+  * t03 the six lines explained by
+    decode_aprs, field by field.
+  * t04 twelve packets generated with
+    rising noise (gen_packets -n 12):
+    9 decoded, 3 lost. The noisy WAV
+    itself was a scratch product and
+    was not kept; the commands in
+    commands.txt recreate it.
+  * t05 direwolf run against the lab
+    configuration: the file accepted,
+    four call-sign messages (the
+    placeholder disarms beaconing and
+    digipeating), then the honest stop
+    at the missing audio device.
+  * t06 the same, one letter worse:
+    MYCALL mis-spelled by sed, and the
+    parser naming the word and the line.
+    broken.conf is made by that sed
+    line and was not kept.
+  * t07 a full start against the null
+    device: channel summary, AGW and
+    KISS listeners announced, a KISS
+    frame sent by dire-wolf-lab/
+    knock.py and shown in Dire Wolf's
+    hex dump as it is queued, and an
+    AGW connection attached and then
+    closed when no 36-byte header
+    followed.
+
+The sandbox's quirks, discovered by
+running into them:
+
+  * The build machine is shared, and
+    another program was already
+    listening on TCP port 8000 when
+    the lab first tried to open the
+    AGW door. Dire Wolf's message was
+    "Bind failed with error: 98 /
+    Address already in use / Some
+    other application is probably
+    already using port 8000." Rather
+    than disturb the other program,
+    the lab moved its doors: null.conf
+    uses AGWPORT 18000 and KISSPORT
+    18001. direwolf.conf keeps the
+    standard 8000/8001.
+  * On this build, starting with
+    KISSPORT set announced a KISS
+    listener on the configured port
+    and also one on the default 8001
+    (t07). The lab knocked only on the
+    door it configured, and notes the
+    extra announcement without a
+    theory to sell you.
+  * Transcript hygiene: Dire Wolf was
+    run with -t 0 (colours off). The
+    file tools colour their output
+    even into a pipe; the colour codes
+    were stripped from the transcript
+    files. Every word is otherwise the
+    program's own, including its blank
+    lines.
+
+Documented only (the lab had no radio
+and used no licence): connecting and
+keying a radio, real audio levels on
+real signals, digipeating, igating,
+the client programs of chapter 13, and
+the neighbours of chapter 14.

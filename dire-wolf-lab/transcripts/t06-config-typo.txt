@@ -1,0 +1,16 @@
+$ sed 's/^MYCALL/MYCAL/' direwolf.conf > broken.conf
+$ timeout 5 direwolf -t 0 -c broken.conf
+Dire Wolf version 1.7
+Includes optional support for:  gpsd hamlib cm108-ptt
+
+Reading config file broken.conf
+Config file: Unrecognized command 'MYCAL' on line 10.
+Config file: MYCALL must be set for channel 0 before beaconing is allowed.
+Config file: MYCALL must be set for receive channel 0 before digipeating is allowed.
+Config file: MYCALL must be set for transmit channel 0 before digipeating is allowed.
+Config file: Beaconing should be configured for channel 0 when digipeating is enabled.
+Audio device for both receive and transmit: plughw:1,0  (channel 0)
+ALSA lib confmisc.c:165:(snd_config_get_card) Cannot get card index for 1
+Could not open audio device plughw:1,0 for input
+No such file or directory
+Pointless to continue without audio device.

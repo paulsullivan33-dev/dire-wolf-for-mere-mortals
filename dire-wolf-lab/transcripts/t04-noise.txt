@@ -1,0 +1,39 @@
+$ gen_packets -n 12 -o noisy.wav
+Output file set to noisy.wav
+built in message...
+$ atest noisy.wav
+44100 samples per second.  16 bits per sample.  1 audio channels.
+827228 audio bytes in file.  Duration = 9.4 seconds.
+Fix Bits level = 0
+Channel 0: 1200 baud, AFSK 1200 & 2200 Hz, A, 44100 sample rate.
+
+DECODED[1] 0:00.773 WB2OSZ-15 audio level = 57(14/14)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0001 of 0012
+
+DECODED[2] 0:01.554 WB2OSZ-15 audio level = 66(15/15)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0002 of 0012
+
+DECODED[3] 0:02.336 WB2OSZ-15 audio level = 75(16/15)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0003 of 0012
+
+DECODED[4] 0:03.118 WB2OSZ-15 audio level = 84(16/17)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0004 of 0012
+
+DECODED[5] 0:03.899 WB2OSZ-15 audio level = 93(16/16)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0005 of 0012
+
+DECODED[6] 0:04.681 WB2OSZ-15 audio level = 101(17/16)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0006 of 0012
+
+DECODED[7] 0:05.463 WB2OSZ-15 audio level = 111(17/18)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0007 of 0012
+
+DECODED[8] 0:06.244 WB2OSZ-15 audio level = 120(18/19)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0008 of 0012
+
+DECODED[9] 0:07.026 WB2OSZ-15 audio level = 129(19/17)     
+[0] WB2OSZ-15>TEST:,The quick brown fox jumps over the lazy dog!  0009 of 0012
+
+
+9 from noisy.wav
+9 packets decoded in 0.137 seconds.  68.3 x realtime

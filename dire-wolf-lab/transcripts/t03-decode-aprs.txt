@@ -1,0 +1,28 @@
+$ decode_aprs < packets.txt
+
+N0CALL>APDW17,WIDE2-2:!4449.98N/08930.02W# Bramble Hill lab site - fictional
+Position, Generic digipeater, DireWolf, WB2OSZ
+N 44 49.9800, W 089 30.0200
+ Bramble Hill lab site - fictional
+
+N0CALL-9>APDW17,WIDE1-1:!4450.10N/08929.88W>Lab rover, invented for the guide
+Position, normal car (side view), DireWolf, WB2OSZ
+N 44 50.1000, W 089 29.8800
+Lab rover, invented for the guide
+
+N0CALL>APDW17,WIDE1-1:;HILLTOP  *111111z4449.98N/08930.02W#Fictional object from the lab
+Object, "HILLTOP", Generic digipeater, DireWolf, WB2OSZ
+N 44 49.9800, W 089 30.0200
+Fictional object from the lab
+
+N0CALL-9>APDW17,WIDE1-1::N0CALL   :Off-air loop test, nobody is transmitting{001
+APRS Message, number "001", from "N0CALL-9" to "N0CALL", DireWolf, WB2OSZ
+Off-air loop test, nobody is transmitting
+
+N0CALL-5>APDW17,WIDE1-1:>Lab weather box says hello - generated audio only
+Status Report, DireWolf, WB2OSZ
+Lab weather box says hello - generated audio only
+
+N0CALL-5>APDW17,WIDE1-1:T#001,123,045,006,078,090,00000000
+Telemetry, DireWolf, WB2OSZ
+Seq=1, A1=123, A2=45, A3=6, A4=78, A5=90, D1=0, D2=0, D3=0, D4=0, D5=0, D6=0, D7=0, D8=0

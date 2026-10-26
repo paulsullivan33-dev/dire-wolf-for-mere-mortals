@@ -1,0 +1,30 @@
+site_name: Dire Wolf for Mere Mortals
+site_description: A software TNC that turns a computer and a radio into a packet station. AX.25 and APRS in plain language, packets made and decoded off the air in the lab, and the licence duties of digipeaters and igates stated up front.
+site_url: https://paulsullivan33-dev.github.io/dire-wolf-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Dire Wolf Is: what-dire-wolf-is.md
+  - Packet Radio and AX.25: packet-radio-and-ax25.md
+  - APRS in Plain Terms: aprs-in-plain-terms.md
+  - Installing Dire Wolf: installing-dire-wolf.md
+  - The Configuration File: the-configuration-file.md
+  - Audio Levels, Honestly: audio-levels.md
+  - KISS and AGW — The Two Doors: kiss-and-agw.md
+  - Your First Decode: your-first-decode.md
+  - Making a Packet and Hearing It Back: making-a-packet.md
+  - The Digipeater: the-digipeater.md
+  - The Igate and Its Responsibilities: the-igate.md
+  - Beacons and Telemetry: beacons-and-telemetry.md
+  - Connecting Applications: connecting-applications.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

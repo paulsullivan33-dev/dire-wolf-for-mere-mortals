@@ -1,0 +1,27 @@
+$ atest packets.wav
+44100 samples per second.  16 bits per sample.  1 audio channels.
+417232 audio bytes in file.  Duration = 4.7 seconds.
+Fix Bits level = 0
+Channel 0: 1200 baud, AFSK 1200 & 2200 Hz, A, 44100 sample rate.
+
+DECODED[1] 0:00.792 N0CALL audio level = 50(14/14)     
+[0] N0CALL>APDW17,WIDE2-2:!4449.98N/08930.02W# Bramble Hill lab site - fictional<0x0a>
+
+DECODED[2] 0:01.588 N0CALL-9 audio level = 50(14/14)     
+[0] N0CALL-9>APDW17,WIDE1-1:!4450.10N/08929.88W>Lab rover, invented for the guide<0x0a>
+
+DECODED[3] 0:02.468 N0CALL audio level = 50(14/14)     
+[0] N0CALL>APDW17,WIDE1-1:;HILLTOP  *111111z4449.98N/08930.02W#Fictional object from the lab<0x0a>
+
+DECODED[4] 0:03.282 N0CALL-9 audio level = 50(14/14)     
+[0] N0CALL-9>APDW17,WIDE1-1::N0CALL   :Off-air loop test, nobody is transmitting{001<0x0a>
+
+DECODED[5] 0:04.056 N0CALL-5 audio level = 50(14/14)     
+[0] N0CALL-5>APDW17,WIDE1-1:>Lab weather box says hello - generated audio only<0x0a>
+
+DECODED[6] 0:04.722 N0CALL-5 audio level = 50(14/14)     
+[0] N0CALL-5>APDW17,WIDE1-1:T#001,123,045,006,078,090,00000000<0x0a>
+
+
+6 from packets.wav
+6 packets decoded in 0.104 seconds.  45.4 x realtime
